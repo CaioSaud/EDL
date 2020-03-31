@@ -36,7 +36,7 @@ Alguns feitos de Smalltalk:
 Smalltalk é uma liguagem "puramente" orientada a objeto. Isso significa que diferente de C++ e Java, em Smalltalk não
 existe diferença entre valores que são objetos e valores que são de tipos primitivos. Em smalltalk esses valores de tipos
 primitivos, como inteiros, booleanos, também são considerados objetos.
-É uma lingaguem dinâmica. Smalltalk, assim como Java, na maioria das vezes é compilada em bytecode para depois ser interpretada por uma máquina virtual (just in time compilation)
+<p>É uma lingaguem dinâmica. Smalltalk, assim como Java, na maioria das vezes é compilada em bytecode para depois ser interpretada por uma máquina virtual (just in time compilation)</p>
 Smalltalk é uma linguagem de propósito geral, sendo assim, ela pode ser usada em diversos tipos de problemas, como: machine
 learning, app para desktop, entre outros.
 
