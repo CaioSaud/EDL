@@ -54,12 +54,20 @@ learning, app para desktop, entre outros.
   *Em smalltalk as ordens das operações matemáticas são sempre feitas da esquerda para direita, independentemente da ordem de importancia*
   ~~~
 Transcript clear.
-n := (UIManager default request: 'Title of the request') asNumber.
+n := (UIManager default request: 'Digite um número') asNumber.
 [n <=1]whileFalse: [Transcript show: n asString, (n odd ifTrue: [' é Impar']ifFalse: [' é Par']);cr. n:=n-1 ].
 Transcript show: 'feito'
 ~~~
+  ~~~
+  Transcript clear.
+  n := (UIManager default request: 'Digite um número') asNumber.
+  a:=0.
+  Transcript show: 'Até o número ', n asString.
+  [n<=1]
+  whileFalse: [n isPrime ifTrue: [a:=a+1].n:=n-1 ].
+  Transcript show: ' existem ', a asString , ' número primos'
+  ~~~
 
-  
 #### *Exemplo Interessante*
 
 ## **Bibliografia:**
