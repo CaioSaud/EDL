@@ -45,10 +45,16 @@ learning, app para desktop, entre outros.
 #### *Exemplos Simples*
 
   ~~~
-  Transcript show: 'Hello, world!'.
-  teste
+  Transcript show: 'Hello, world!'
   ~~~
+  
+  ~~~~
+  Transcript show: 2+3*8
+  ~~~~
+  *Em smalltalk as ordens das operações matemáticas são sempre feitas da esquerda para direita, independentemente da ordem de importancia*
 
+
+  
 #### *Exemplo Interessante*
 
 ## **Bibliografia:**
