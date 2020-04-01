@@ -51,7 +51,7 @@ learning, app para desktop, entre outros.
   ~~~~
   Transcript show: 2+3*8
   ~~~~
-  *Em smalltalk as ordens das operações matemáticas são sempre feitas da esquerda para direita, independentemente da ordem de importancia*
+  *Em smalltalk as ordens das operações matemáticas são sempre feitas da esquerda para direita, independentemente da ordem de importancia. Sendo assim o resultado da equação acima é 40.*
   ~~~
 Transcript clear.
 n := (UIManager default request: 'Digite um número') asNumber.
