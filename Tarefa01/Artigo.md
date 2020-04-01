@@ -52,7 +52,12 @@ learning, app para desktop, entre outros.
   Transcript show: 2+3*8
   ~~~~
   *Em smalltalk as ordens das operações matemáticas são sempre feitas da esquerda para direita, independentemente da ordem de importancia*
-
+  ~~~
+Transcript clear.
+n := (UIManager default request: 'Title of the request') asNumber.
+[n <=1]whileFalse: [Transcript show: n asString, (n odd ifTrue: [' é Par'] ifFalse: [' é Impar']);cr  . n:=n-1 ].
+Transcript show: 'feito'
+~~~
 
   
 #### *Exemplo Interessante*
