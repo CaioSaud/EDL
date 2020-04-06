@@ -68,7 +68,6 @@ Transcript show: 'feito'
   Transcript show: ' existem ', a asString , ' número primos'
   ~~~
 
-#### *Exemplo Interessante*
 
 ## **Bibliografia:**
 
