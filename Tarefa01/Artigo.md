@@ -75,7 +75,12 @@ Transcript show:'O número era: ',t asString ,' e você acertou em: ', n asStrin
   ~~~
   
 ## **Função de alta expressividade:**
-  Smalltalk é uma linguagem baseada em imagem (image based). Normalmente, as linguagens de programação separam o código estático (funções, definições de classes), do código dinamico, ou em tempo de execução (como objetos). Quando executado, o código é carregado e sempre startado do zero, arquivos de configurações ou fontes de dados são recriados. Qualquer configuração do programa (ou do programador) não é salva e precisa ser reconfigurada a cada reinício.Quando você sai de um programa tradicional e salva e depois inicia de novo, você perde muita informação, como histórico do que foi alterado ou até mesmo a posição do cursor. Uma linguagem de programação baseada em imagem, como Smalltalk, não perde essas informações nem mesmo quando o computador é desligado. Quando se está programando em Smalltalk, o que acontece é que você está modificando uma imagem do ambiente de execução.
+  Smalltalk é uma linguagem baseada em imagem (image based). Normalmente, as linguagens de programação separam o código estático (funções, definições de classes), do código dinamico, ou em tempo de execução (como objetos). Quando executado, o código é carregado e sempre startado do zero, arquivos de configurações ou fontes de dados são recriados. Qualquer configuração do programa (ou do programador) não é salva e precisa ser reconfigurada a cada reinício.Quando você sai de um programa tradicional e salva e depois inicia de novo, você perde muita informação, como histórico do que foi alterado ou até mesmo a posição do cursor. Ao entrar no Microsoft Word, por exemplo, você vai perceber que vai demorar um pouco, isso acontece pois ele precisa reprocessar ou reaprender muitos conceitos antes de começar a se tornar utilizável.
+  </p>Uma linguagem de programação baseada em imagem, como Smalltalk, não perde essas informações nem mesmo quando o computador é desligado. Quando se está programando em Smalltalk, o que acontece é que você está modificando uma imagem do ambiente de execução. A maneira que isso funciona é a aplicação pega todo o seu estado (variável, funcioções, tipos, etc) e sakva em um arquivo. Esse arquivo  chamado de arquivo imagem (image file). A próxima vez que o programa inciar, vai ser carregado do estado em que parou.<p>
+  Algumas vantagens são óbvias como: As aplicaçes inciam mais rapidamente, mas é muito bom para o programador pois a implementação, compilação, execução e debugging estão integrados.
+  E o motivo de não ser tão popular é que esse tipo de programação deixa o código mutio exposto em tempo de execução. Assim como não funciona bem com Sistema de controle de versão que programadores utilizam para salvar código. Támbem não é fácil se relacionar com software externos, pois a maioria das bibliotecas não utilizam as mesmas convenções da linguagens baseada em imagem.
+  
+  
 
 ## **Bibliografia:**
 
@@ -84,3 +89,4 @@ Transcript show:'O número era: ',t asString ,' e você acertou em: ', n asStrin
 + http://worrydream.com/EarlyHistoryOfSmalltalk/#p12  
 + https://www.codeproject.com/Articles/1241904/Introduction-to-the-Smalltalk-Programming-Language
 + https://programming.dojo.net.nz/languages/smalltalk/index
++ https://www.ajibot.com/blog/image-based-programming
