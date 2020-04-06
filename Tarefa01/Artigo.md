@@ -33,9 +33,9 @@ Alguns feitos de Smalltalk:
 
 #### *Classificações*
 
-Smalltalk é uma liguagem "puramente" orientada a objeto. Isso significa que diferente de C++ e Java, em Smalltalk não
+Smalltalk é uma liguagem "puramente" orientada a objeto. Isso significa que, diferente de C++ e Java, em Smalltalk não
 existe diferença entre valores que são objetos e valores que são de tipos primitivos. Em smalltalk esses valores de tipos
-primitivos, como inteiros, booleanos, também são considerados objetos.
+primitivos, como inteiros e booleanos, também são considerados objetos.
 <p>É uma lingaguem dinâmica. Smalltalk, assim como Java, na maioria das vezes é compilada em bytecode para depois ser interpretada por uma máquina virtual (just in time compilation)</p>
 Smalltalk é uma linguagem de propósito geral, sendo assim, ela pode ser usada em diversos tipos de problemas, como: machine
 learning, app para desktop, entre outros.
@@ -52,12 +52,16 @@ learning, app para desktop, entre outros.
   Transcript show: 2+3*8
   ~~~~
   *Em smalltalk as ordens das operações matemáticas são sempre feitas da esquerda para direita, independentemente da ordem de importancia. Sendo assim o resultado da equação acima é 40.*
+  
+  Exemplo de programa para fala se o número é par ou impar:
   ~~~
 Transcript clear.
 n := (UIManager default request: 'Digite um número') asNumber.
 [n <=1]whileFalse: [Transcript show: n asString, (n odd ifTrue: [' é Impar']ifFalse: [' é Par']);cr. n:=n-1 ].
-Transcript show: 'feito'
+Transcript show: 'Feito'
 ~~~
+
+   Exemplo de programa para descobrir quantos números primos existem no intervalo selecionado:
   ~~~
   Transcript clear.
   n := (UIManager default request: 'Digite um número') asNumber.
@@ -67,7 +71,9 @@ Transcript show: 'feito'
   whileFalse: [n isPrime ifTrue: [a:=a+1].n:=n-1 ].
   Transcript show: ' existem ', a asString , ' número primos'
   ~~~
-
+  
+## **Função de alta expressividade:**
+  Smalltalk é uma linguagem que é baseada em imagem (image based). Normalmente as linguagens de programação separam o código estático, (funções, definições de classes) do código dinamico, ou em tempo de execução (como objetos). Quando executado, o código é carregado e sempre startado do zero, arquivos de configurações ou fontes de dados são recriados. Qualquer configuração do programa (ou do programador) não é salva e precisa ser configurada a cada reinício.Quando você sai de um programa tradicional e salva e depois inicia de novo, você perde muita informação, como histórico ou até mesmo a posição do cursor. Uma linguagem de programação, como Smalltalk, não perde essas informações nem mesmo quando o computador é desligado. Quando se está programando em Smalltalk, o que acontece é que você está modificando uma imagem do ambiente de execução.
 
 ## **Bibliografia:**
 
