@@ -53,12 +53,14 @@ learning, app para desktop, entre outros.
   ~~~~
   *Em smalltalk as ordens das operações matemáticas são sempre feitas da esquerda para direita, independentemente da ordem de importancia. Sendo assim o resultado da equação acima é 40.*
   
-  Exemplo de programa para fala se o número é par ou impar:
+  Exemplo de um jogo para adivinhar o número que o pc escolheu:
   ~~~
 Transcript clear.
-n := (UIManager default request: 'Digite um número') asNumber.
-[n <=1]whileFalse: [Transcript show: n asString, (n odd ifTrue: [' é Impar']ifFalse: [' é Par']);cr. n:=n-1 ].
-Transcript show: 'Feito'
+t :=(1 to: 10000) atRandom .
+n:=1.
+[(a:=(UIManager default request: 'Digite um número') asNumber) = t]
+whileFalse: [Transcript show: (a<t  ifTrue: ['Meu número é maior']ifFalse: ['Meu número é menor']);cr. n:=n+1 ].
+Transcript show:'O número era: ',t asString ,' e você acertou em: ', n asString, ' tentativas '
 ~~~
 
    Exemplo de programa para descobrir quantos números primos existem no intervalo selecionado:
