@@ -75,6 +75,7 @@ Transcript show:'O número era: ',t asString ,' e você acertou em: ', n asStrin
   ~~~
   
 ## **Função de alta expressividade:**
+  ### Image Based Language
   Smalltalk é uma linguagem baseada em imagem (image based). Normalmente, as linguagens de programação separam o código estático (funções, definições de classes), do código dinamico, ou em tempo de execução (como objetos). Quando executado, o código é carregado e sempre startado do zero, arquivos de configurações ou fontes de dados são recriados. Qualquer configuração do programa (ou do programador) não é salva e precisa ser reconfigurada a cada reinício.Quando você sai de um programa tradicional e salva e depois inicia de novo, você perde muita informação, como histórico do que foi alterado ou até mesmo a posição do cursor. Ao entrar no Microsoft Word, por exemplo, você vai perceber que vai demorar um pouco, isso acontece pois ele precisa reprocessar ou reaprender muitos conceitos antes de começar a se tornar utilizável.
   
   </p>Uma linguagem de programação baseada em imagem, como Smalltalk, não perde essas informações nem mesmo quando o computador é desligado. Quando se está programando em Smalltalk, o que acontece é que você está modificando uma imagem do ambiente de execução. A maneira que isso funciona é a aplicação pega todo o seu estado (variável, funcioções, tipos, etc) e sakva em um arquivo. Esse arquivo  chamado de arquivo imagem (image file). A próxima vez que o programa inciar, vai ser carregado do estado em que parou.<p>
@@ -82,7 +83,15 @@ Transcript show:'O número era: ',t asString ,' e você acertou em: ', n asStrin
   
   E o motivo de não ser tão popular é que esse tipo de programação deixa o código mutio exposto em tempo de execução. Assim como não funciona bem com Sistema de controle de versão que programadores utilizam para salvar código. Támbem não é fácil se relacionar com software externos, pois a maioria das bibliotecas não utilizam as mesmas convenções da linguagens baseada em imagem.
   
+  ### Reflexividade
+  Em ciência da computação, reflexão computacional é a capacidade de um programa observar ou até mesmo modificar sua estrutura ou comportamento. Tipicamente, o termo se refere à reflexão dinâmica (em tempo de execução), embora muitas linguagens suportem reflexão estática (em tempo de compilação). A reflexão é mais comum em linguagens alto nível, como SmallTalk e menos comum em linguagens de mais baixo nível como o C.
   
+  Embora sejam grandes os benefícios da reflexão, sobretudo num ambiente onde a flexibilidade seja muito necessária, o uso desse recurso também traz seus problemas. Entre eles está a maior complexidade do código. Como será visto nos exemplos, o código usando reflexão é mais complexo e, portanto, sujeito a erros. Também há a necessidade de um bom controle de versões: pequenas peças de código podem ser compiladas e disponibilizadas separadamente, dessa forma, um bom controle de versões faz-se necessário para garantir a compatibilidade de todo o sistema. Outro problema é a maior susceptibilidade a erros, não só devido a complexidade mas também à ausência de verificação sintática e semântica em tempo de compilação. Por fim, há uma redução do desempenho geral da aplicação, especialmente percebido em sistemas com diversas classes refletidas.
+  
+  Nos Exemplos de Programas será demonstrado a diferença de acessar uma variável de instância em tempo de execução por meio de reflexão e sem o uso da reflexão.
+
+  Em Smalltalk as varáveis de instância são privadas para a própria instância. Diferentemente de Java e C++, que permitem o acesso de outra instância a esse tipo de variável. Com isso nâo é possível duas instâncias da mesma class conseguir acessar as variáveis de instância uma da outra. Apenas fazendo uso de reflexão.
+
 
 ## **Bibliografia:**
 
