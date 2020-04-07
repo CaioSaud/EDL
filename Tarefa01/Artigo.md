@@ -90,7 +90,7 @@ Transcript show:'O número era: ',t asString ,' e você acertou em: ', n asStrin
   
   Nos Exemplos de Programas será demonstrado a diferença de acessar uma variável de instância em tempo de execução por meio de reflexão e sem o uso da reflexão utilizando getter/setters.
 
-  Em Smalltalk as varáveis de instância são privadas para a própria instância. Diferentemente de Java e C++, que permitem o acesso de outra instância a esse tipo de variável. Com isso nâo é possível duas instâncias da mesma class conseguir acessar as variáveis de instância uma da outra. Apenas fazendo uso de reflexão.
+  Em Smalltalk as varáveis de instância são privadas para a própria instância. Diferentemente de Java e C++, que permitem escolher esse tipo de encapsulamento para esse tipo de variável. Com isso nâo é possível duas instâncias da mesma class conseguir acessar as variáveis de instância uma da outra. Apenas fazendo uso de reflexão ou getter e setter.
 
 
 ## **Bibliografia:**
