@@ -21,5 +21,7 @@ prova1:= CalcIMC new.
 prova1 calculoimc .
 Transcript cr.
 prova1 instVarNamed: 'peso' put: ((UIManager default request: 'Digite um número') asNumber). "Nesta linha ocorre a alteração de valor
-variável de instância em tempo de execução, utilizando reflection"
-Transcript show: 'Novo cálculo IMC :'.prova1 calculoimc .
+variável de instância peso em tempo de execução, utilizando reflection"
+caio instVarNamed: 'altura' put: ((UIManager default request: 'Digite o novo valor de altura') asNumber)."Nesta linha ocorre a alteração de valor
+variável de instância altura em tempo de execução, utilizando reflection"
+Transcript show: 'Novo cálculo IMC :'.caio calculoimc .
