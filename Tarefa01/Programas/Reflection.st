@@ -12,7 +12,8 @@ Object subclass: #CalcIMC
 		altura:=1.90.
 
 	calculoimc
-  		Transcript show: (peso/(altura*altura)) asString 
+  		(peso/(altura*altura))<0 ifTrue: [Transcript error: 'Validação número negativo'] 
+		ifFalse: [Transcript show: ((peso/(altura*altura))asFloat ) asString ]
 		
 
 
@@ -22,6 +23,6 @@ prova1 calculoimc .
 Transcript cr.
 prova1 instVarNamed: 'peso' put: ((UIManager default request: 'Digite um número') asNumber). "Nesta linha ocorre a alteração de valor
 variável de instância peso em tempo de execução, utilizando reflection"
-caio instVarNamed: 'altura' put: ((UIManager default request: 'Digite o novo valor de altura') asNumber)."Nesta linha ocorre a alteração de valor
+prova1 instVarNamed: 'altura' put: ((UIManager default request: 'Digite o novo valor de altura') asNumber)."Nesta linha ocorre a alteração de valor
 variável de instância altura em tempo de execução, utilizando reflection"
-Transcript show: 'Novo cálculo IMC :'.caio calculoimc .
+Transcript show: 'Novo cálculo IMC :'.prova1 calculoimc .
