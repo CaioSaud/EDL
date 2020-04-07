@@ -1,14 +1,19 @@
+ error: aString 
+"Alterando a mensagem de erro da imagem do Smalltalk"
+	^Error new signal:'Você deve digitar um número inteiro maior que zero'
+
 Object subclass: #CalcIMC
 	instanceVariableNames: 'peso altura'
 	classVariableNames: ''
 	package: 'IMC'
   
- initialize 
-  peso:= 90.
-  altura:=1.90.
+	initialize 
+		peso:= 90.
+		altura:=1.90.
 
-calculoimc
-  Transcript show: (peso/(altura*altura)) asString 
+	calculoimc
+  		Transcript show: (peso/(altura*altura)) asString 
+		
 
 
 Transcript clear.
