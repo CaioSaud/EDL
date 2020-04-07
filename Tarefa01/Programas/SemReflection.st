@@ -13,7 +13,8 @@ Object subclass: #CalcIMC
 		altura:=1.90.
 
 	calculoimc
-  		Transcript show: (peso/(altura*altura)) asString 
+  		(peso/(altura*altura))<0 ifTrue: [Transcript error: 'Validação número negativo'] 
+		ifFalse: [Transcript show: ((peso/(altura*altura))asFloat ) asString ]
   
   valorAltura
     ^altura.
@@ -32,8 +33,8 @@ Transcript clear.
 prova1:= CalcIMC new.
 prova1 calculoimc .
 Transcript cr.
-prova1 valorAltura: 2.
-prova1 valorPeso: 85.
+prova1 valorAltura:((UIManager default request: 'Digite o novo valor de altura') asNumber).
+prova1 valorPeso:((UIManager default request: 'Digite o novo valor de peso') asNumber).
 prova1 calculoimc.
 
 
