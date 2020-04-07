@@ -101,3 +101,4 @@ Transcript show:'O número era: ',t asString ,' e você acertou em: ', n asStrin
 + https://www.codeproject.com/Articles/1241904/Introduction-to-the-Smalltalk-Programming-Language
 + https://programming.dojo.net.nz/languages/smalltalk/index
 + https://www.ajibot.com/blog/image-based-programming
++ http://pharo.gforge.inria.fr/PBE1/PBE1ch15.html
