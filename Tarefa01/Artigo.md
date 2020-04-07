@@ -88,7 +88,7 @@ Transcript show:'O número era: ',t asString ,' e você acertou em: ', n asStrin
   
   Embora sejam grandes os benefícios da reflexão, sobretudo num ambiente onde a flexibilidade seja muito necessária, o uso desse recurso também traz seus problemas. Entre eles está a maior complexidade do código. Como será visto nos exemplos, o código usando reflexão é mais complexo e, portanto, sujeito a erros. Também há a necessidade de um bom controle de versões: pequenas peças de código podem ser compiladas e disponibilizadas separadamente, dessa forma, um bom controle de versões faz-se necessário para garantir a compatibilidade de todo o sistema. Outro problema é a maior susceptibilidade a erros, não só devido a complexidade mas também à ausência de verificação sintática e semântica em tempo de compilação. Por fim, há uma redução do desempenho geral da aplicação, especialmente percebido em sistemas com diversas classes refletidas.
   
-  Nos Exemplos de Programas será demonstrado a diferença de acessar uma variável de instância em tempo de execução por meio de reflexão e sem o uso da reflexão.
+  Nos Exemplos de Programas será demonstrado a diferença de acessar uma variável de instância em tempo de execução por meio de reflexão e sem o uso da reflexão utilizando getter/setters.
 
   Em Smalltalk as varáveis de instância são privadas para a própria instância. Diferentemente de Java e C++, que permitem o acesso de outra instância a esse tipo de variável. Com isso nâo é possível duas instâncias da mesma class conseguir acessar as variáveis de instância uma da outra. Apenas fazendo uso de reflexão.
 
