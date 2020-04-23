@@ -71,11 +71,11 @@ learning, app para desktop, entre outros.
   ~~~
   Transcript show: 'Hello, world!'
   ~~~
-  *O comando Transcript é utilizado para abrir a janela Transcript, que é bastante utilizada para logs e prints de resultados (apenas em formato de texto).
+  *O comando Transcript é utilizado para abrir a janela Transcript, que é bastante utilizada para logs e prints de resultados (apenas em formato de texto).*
   ~~~~
   Transcript show: 2+3*8
   ~~~~
-  *Em smalltalk as ordens das operações matemáticas são sempre feitas da esquerda para direita, independentemente da ordem de importancia. Sendo assim o resultado da equação acima é 40.*
+  *Em smalltalk as ordens das operações matemáticas são sempre feitas da esquerda para direita, independentemente da ordem de importancia. Sendo assim o resultado da equação acima é 40. Isso acontece pois as operações matemáticas são consideradas mensagens passadas a objetos. E a execução dessas mensagens é sempre feita da esquerda para a direita.*
   
   Exemplo de um jogo para adivinhar o número que o pc escolheu:
   ~~~
