@@ -71,7 +71,7 @@ learning, app para desktop, entre outros.
   ~~~
   Transcript show: 'Hello, world!'
   ~~~
-  
+  *O comando Transcript é utilizado para abrir a janela Transcript, que é bastante utilizada para logs e prints de resultados (apenas em formato de texto).
   ~~~~
   Transcript show: 2+3*8
   ~~~~
