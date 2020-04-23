@@ -36,6 +36,29 @@ Alguns feitos de Smalltalk:
 Smalltalk é uma liguagem "puramente" orientada a objeto. Isso significa que, diferente de C++ e Java, em Smalltalk não
 existe diferença entre valores que são objetos e valores que são de tipos primitivos. Em smalltalk esses valores de tipos
 primitivos, como inteiros e booleanos, também são considerados objetos.
+
+  Para ser considerada uma linguagem puramente orientada a objeto a linguagem requer 7 caractrísticas:
+  1. Encapsulamento (separar o programa em partes, o mais isolado possível).
+  2. Herança (derivar uma nova classe de uma classe existente).
+  3. Polimorfismo (permite ao desenvolvedor usar o mesmo elemento de formas diferentes).
+  4. Abstração (trabalhar um objeto dentro da programação se preocupando somente com suas principais propriedades, sem se apegar a pontos acidentais).
+  5. Todos os tipos predefinidos são objetos.
+  6. Todos os tipos definidos pelo usuário são objetos.
+  7. Todas as operações feitas em objeto são feitas através de métodos.
+  
+  Por exemplo, Java não é considerada puramente orientada a objeto pois não possui as características 5 e 7.
+#### Possui tipos primitivos de dados:
+  ~~~~
+  int a = 13; 
+  System.out.print(a);
+  ~~~~
+#### É possível se comunicar com objetos sem chamar seus métodos:
+  ~~~~
+  String s1 = "SMALL" + "TALK" ;
+  ~~~~
+
+Wrapper Class: Wrapper class provides the mechanism to convert primitive into object and object into primitive. In Java, you can use Integer, Float etc. instead of int, float etc. We can communicate with objects without calling their methods. ex. using arithmetic operators.
+  
 <p>É uma lingaguem dinâmica. Smalltalk, assim como Java, na maioria das vezes é compilada em bytecode para depois ser interpretada por uma máquina virtual (just in time compilation)</p>
 Smalltalk é uma linguagem de propósito geral, sendo assim, ela pode ser usada em diversos tipos de problemas, como: machine
 learning, app para desktop, entre outros.
