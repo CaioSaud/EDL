@@ -64,7 +64,7 @@ primitivos, como inteiros e booleanos, também são considerados objetos.
   
 <p>É uma lingaguem dinâmica. Smalltalk, assim como Java, na maioria das vezes é compilada em bytecode para depois ser interpretada por uma máquina virtual (just in time compilation)</p>
 
-Quanto a sua sintaxe, em Smalltalk apenas 6 palavras são de uso reservador true, false, nil, self, super, and thisContext. Como é considerada uma linguagem para crianças, assim como em portugês, na fim de uma linha de código é utilizado o "." (ponto final). A sintaxe em Smalltalk é bem diferente de outras linguagens de programação, utiliza-se sempre a ordem `<objeto recebedor>` `< mensagem >`. Quando você precisar passar várias mensagens para um objeto, é possível utilizar um ponto-e-vírgula separando as chamadas. Como no boco de código abaixo:
+Quanto a sua sintaxe, em Smalltalk apenas 6 palavras são de uso reservador true, false, nil, self, super, and thisContext. Como é considerada uma linguagem para crianças, assim como em portugês, na fim de uma linha de código é utilizado o "." (ponto final).Em Smalltalk não é necessário a declaração de tipos de variáveis. A sintaxe em Smalltalk é bem diferente de outras linguagens de programação, utiliza-se sempre a ordem `<objeto recebedor>` `< mensagem >`. Quando você precisar passar várias mensagens para um objeto, é possível utilizar um ponto-e-vírgula separando as chamadas. Como no boco de código abaixo:
   ~~~~
   Transcript clear; show:‘Hello World’; cr.
   ~~~~
