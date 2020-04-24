@@ -4,7 +4,7 @@
 #### *Introdução*
 
 Smalltalk-80, ou apenas, Smalltalk é a linguagem de programação que tornou popular o paradigma de orientação ao objeto.
-A pureza e clareza de Smalltalk sobre esse conceito inspirou quase todas as outras arquiteturas das linguagens OOP.
+A pureza e clareza de Smalltalk sobre esse conceito inspirou quase todas as outras arquiteturas das linguagens OOP. Por ser uma linguagem relativamente simples, Smalltalk é muito indicado para amadores em programação.
 
 Umas das primeiras linguagens orientada a objetos foi Smalltalk, e o que explica o termo puramente orientada a objetos, é que em Smalltalk tudo é objeto, inclusive if, while e for não são comandos, são métodos.
   
