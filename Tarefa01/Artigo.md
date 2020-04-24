@@ -16,6 +16,8 @@ Overflow "most loved programming language" de 2017. Já em 2018 não ficou nem e
     * [Exemplos Simples](#Exemplos-Simples)
     * [Exemplo Interessante](#Exemplo-Interessante)
   * [Funções de Alta Expressividade](#Funções-de-Alta-Expressividade)  
+    * [Linguagem Baseada em Imagens](#Linguagem-Baseada-em-Imagens)
+    * [Reflexividade](#Reflexividade)  
   * [Bibliografia](#Bibliografia)
     
     
@@ -100,7 +102,7 @@ Transcript show:'O número era: ',t asString ,' e você acertou em: ', n asStrin
   ~~~
   
 ## **Funções de Alta Expressividade:**
-  ### Image Based Language
+  ### Linguagem Baseada em Imagens
   Smalltalk é uma linguagem baseada em imagem (image based). Normalmente, as linguagens de programação separam o código estático (funções, definições de classes), do código dinamico, ou em tempo de execução (como objetos). Quando executado, o código é carregado e sempre startado do zero, arquivos de configurações ou fontes de dados são recriados. Qualquer configuração do programa (ou do programador) não é salva e precisa ser reconfigurada a cada reinício.Quando você sai de um programa tradicional e salva e depois inicia de novo, você perde muita informação, como histórico do que foi alterado ou até mesmo a posição do cursor. Ao entrar no Microsoft Word, por exemplo, você vai perceber que vai demorar um pouco, isso acontece pois ele precisa reprocessar muitos conceitos antes de começar a se tornar utilizável.
   
   </p>Uma linguagem de programação baseada em imagem, como Smalltalk, não perde essas informações nem mesmo quando o computador é desligado. Quando se está programando em Smalltalk, o que acontece é que você está modificando uma imagem do ambiente de execução. A maneira que isso funciona é a aplicação pega todo o seu estado (variável, funções, tipos, etc) e salva em um arquivo. Esse arquivo  chamado de arquivo imagem (image file). A próxima vez que o programa inciar, vai ser carregado do estado em que parou.<p>
