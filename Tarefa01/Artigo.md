@@ -5,6 +5,8 @@
 
 Smalltalk-80, ou apenas, Smalltalk é a linguagem de programação que tornou popular o paradigma de orientação ao objeto.
 A pureza e clareza de Smalltalk sobre esse conceito inspirou quase todas as outras arquiteturas das linguagens OOP.
+
+Umas das primeiras linguagens orientada a objetos foi Smalltalk, e o que explica o termo puramente orientada a objetos, é que em Smalltalk tudo é objeto, inclusive if, while e for não são comandos, são métodos.
   
 Apesar da primeira versão de Smalltalk ter sido criada em 1971, essa linguagem ficou em segundo lugar na pesquisa da Stack
 Overflow "most loved programming language" de 2017. Já em 2018 não ficou nem entre as top 26.
@@ -62,7 +64,11 @@ primitivos, como inteiros e booleanos, também são considerados objetos.
   
 <p>É uma lingaguem dinâmica. Smalltalk, assim como Java, na maioria das vezes é compilada em bytecode para depois ser interpretada por uma máquina virtual (just in time compilation)</p>
 
-Quanto a sua sintaxe, em Smalltalk apenas 6 palavras são de uso reservador true, false, nil, self, super, and thisContext. Como é considerada uma linguagem para crianças, assim como em portugês, na fim de uma linha de código é utilizado o "." (ponto final). A sintaxe em Smalltalk é bem diferente de outras linguagens de programação, utiliza-se sempre a ordem `<objeto recebedor>` `< mensagem >`.
+Quanto a sua sintaxe, em Smalltalk apenas 6 palavras são de uso reservador true, false, nil, self, super, and thisContext. Como é considerada uma linguagem para crianças, assim como em portugês, na fim de uma linha de código é utilizado o "." (ponto final). A sintaxe em Smalltalk é bem diferente de outras linguagens de programação, utiliza-se sempre a ordem `<objeto recebedor>` `< mensagem >`. Quando você precisar passar várias mensagens para um objeto, é possível utilizar um ponto-e-vírgula separando as chamadas. Como no boco de código abaixo:
+  ~~~~
+  Transcript clear; show:‘Hello World’; cr.
+  ~~~~
+Acima é solicitado que o Transcript limpe seu console com o método clear, e com o método show é pedido para imprimir Hello World. Por fim, o método cr serve para pular uma linha (como "\n" em C).
 
 Smalltalk é uma linguagem de propósito geral, sendo assim, ela pode ser usada em diversos tipos de problemas, como: machine
 learning, app para desktop, entre outros.
@@ -74,7 +80,7 @@ learning, app para desktop, entre outros.
   ~~~
   Transcript show: 'Hello, world!'
   ~~~
-  *O comando Transcript é utilizado para abrir a janela Transcript, que é bastante utilizada para logs e prints de resultados (apenas em formato de texto).*
+  *O objeto Transcript é utilizado para abrir um console, um lugar onde as mensagens são exibidas.É bastante utilizada para logs e prints de resultados (apenas em formato de texto).*
   ~~~~
   Transcript show: 2+3*8
   ~~~~
@@ -82,23 +88,23 @@ learning, app para desktop, entre outros.
   
   Exemplo de um jogo para adivinhar o número que o pc escolheu:
   ~~~
-Transcript clear.
+Transcript clear. "Limpa o console Transcript"
 t :=(1 to: 10000) atRandom .
-n:=1.
-[(a:=(UIManager default request: 'Digite um número') asNumber) = t]
-whileFalse: [Transcript show: (a<t  ifTrue: ['Meu número é maior']ifFalse: ['Meu número é menor']);cr. n:=n+1 ].
-Transcript show:'O número era: ',t asString ,' e você acertou em: ', n asString, ' tentativas '
+n:=1. "Atribui um valor para n"
+[(a:=(UIManager default request: 'Digite um número') asNumber) = t] "Pede entrada para o usuário, e declara essa entrada como numero, e é o bloco para ser avaliado pelo whileFalse"
+whileFalse: [Transcript show: (a<t  ifTrue: ['Meu número é maior']ifFalse: ['Meu número é menor']);cr. n:=n+1 ]. "Loop com a condição atrelada ao bloco anterior, realizando prints com condições atreladas ao bloco a<t"
+Transcript show:'O número era: ',t asString ,' e você acertou em: ', n asString, ' tentativas ' "Print"
 ~~~
 
    Exemplo de programa para descobrir quantos números primos existem no intervalo selecionado:
   ~~~
-  Transcript clear.
-  n := (UIManager default request: 'Digite um número') asNumber.
-  a:=0.
-  Transcript show: 'Até o número ', n asString.
-  [n<=1]
-  whileFalse: [n isPrime ifTrue: [a:=a+1].n:=n-1 ].
-  Transcript show: ' existem ', a asString , ' número primos'
+  Transcript clear. "Limpa o console Transcript"
+  n := (UIManager default request: 'Digite um número') asNumber. "Pede entrada para o usuário, e declara essa entrada como numero"
+  a:=0. "Atribui um valor para a"
+  Transcript show: 'Até o número ', n asString. "Print"
+  [n<=1] "Bloco para ser avaliado pelo whileFalse"
+  whileFalse: [n isPrime ifTrue: [a:=a+1].n:=n-1 ]. "Loop com a condição atrelada ao bloco anterior"
+  Transcript show: ' existem ', a asString , ' número primos' "Print"
   ~~~
   
 ## **Funções de Alta Expressividade:**
