@@ -132,7 +132,7 @@ public class HelloWorld2{
  }
 }
  ~~~~
- Abaixo, segue um exemplo de código em Smalltalk utilizando Reflection, onde as variáveis "altura" e "peso" são modificadas em tempo de execução. Percebam que o nome da variável é passada como String (entre aspas), isso faz parte da utilização do método Reflection. Em Smalltalk, as variáveis de instância são variáveis privadas, portanto não é possível modifica-las sem a utilização do Reflection.
+ Abaixo, segue um exemplo de código em Smalltalk utilizando Reflection, onde as variáveis "altura" e "peso" são modificadas em tempo de execução. Percebam que o nome da variável é passada como String (entre aspas), isso faz parte da utilização do método Reflection. Em Smalltalk, as variáveis de instância são variáveis privadas, portanto não é possível modifica-las sem a utilização do Reflection ou getters/setters.
  
  ~~~~  
 Object subclass: #CalcIMC
