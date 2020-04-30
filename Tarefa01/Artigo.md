@@ -16,7 +16,7 @@ Overflow "most loved programming language" de 2017. Já em 2018 não ficou nem e
   * [Classificações](#Classificações)
   * [Exemplos](#Exemplos)
     * [Exemplos Simples](#Exemplos-Simples)
-    * [Exemplo Interessantes](#Exemplo-Interessantes)
+    * [Exemplos Interessantes](#Exemplo-Interessantes)
   * [Funções de Alta Expressividade](#Funções-de-Alta-Expressividade)  
     * [Linguagem Baseada em Imagens](#Linguagem-Baseada-em-Imagens)
     * [Reflexividade](#Reflexividade)  
