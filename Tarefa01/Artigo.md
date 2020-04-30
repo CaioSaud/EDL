@@ -16,7 +16,7 @@ Overflow "most loved programming language" de 2017. Já em 2018 não ficou nem e
   * [Classificações](#Classificações)
   * [Exemplos](#Exemplos)
     * [Exemplos Simples](#Exemplos-Simples)
-    * [Exemplo Interessante](#Exemplo-Interessante)
+    * [Exemplo Interessantes](#Exemplo-Interessantes)
   * [Funções de Alta Expressividade](#Funções-de-Alta-Expressividade)  
     * [Linguagem Baseada em Imagens](#Linguagem-Baseada-em-Imagens)
     * [Reflexividade](#Reflexividade)  
@@ -144,7 +144,7 @@ caio instVarNamed: 'altura' put: ((UIManager default request: 'Digite o novo val
 Transcript show: 'Novo cálculo IMC :'.pessoa1 calculoimc .
 ~~~~  
 
-Apesar de Java também possuir a funcionalidade reflection, no código abaixo estamos utilizando getters/setters para a alteração do valor da variável em tempo de execução.
+Apesar de Java também possuir a funcionalidade reflection, no código abaixo estamos utilizando getters/setters para a alteração do valor da variável em tempo de execução. As vantagens de utilizar getters/setters sâo que apesar de ser um código mais simples, Reflection é um conceito díficil de ser compreendido. Em Reflection não existe checagem de tipo pelo compilador, caso tenha alguem erro, esse erro irá acontecer em tempo de execução. E por último códigos com Reflection tendem a ser mais devegar.
 
 ~~~~  
 public class Reflection {
