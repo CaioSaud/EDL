@@ -157,7 +157,7 @@ caio instVarNamed: 'altura' put: ((UIManager default request: 'Digite o novo val
 Transcript show: 'Novo cálculo IMC :'.pessoa1 calculoimc .
 ~~~~  
 
-Apesar de Java também possuir a funcionalidade reflection, no código abaixo estamos utilizando getters/setters para a alteração do valor da variável em tempo de execução. As vantagens de utilizar getters/setters sâo que apesar de ser um código mais simples, Reflection é um conceito díficil de ser compreendido. Em Reflection não existe checagem de tipo pelo compilador, caso tenha alguem erro, esse erro irá acontecer em tempo de execução. E por último códigos com Reflection tendem a ser mais devegar. Em linguaens como Java e Go Reflection é muito utilizado para mockar dependências.
+Apesar de Java também possuir a funcionalidade reflection, no código abaixo estamos utilizando getters/setters para a alteração do valor da variável em tempo de execução. As vantagens de utilizar getters/setters sâo que apesar de ser um código mais simples, Reflection é um conceito díficil de ser compreendido. Em Reflection não existe checagem de tipo pelo compilador, caso tenha alguem erro, esse erro irá acontecer em tempo de execução. E por último códigos com Reflection tendem a ser mais devegar. Em linguaens como Java e Go Reflection é muito utilizado em testes para mockar dependências.
 
 ~~~~  
 public class Reflection {
