@@ -107,6 +107,110 @@ Transcript show:'O número era: ',t asString ,' e você acertou em: ', n asStrin
   Transcript show: ' existem ', a asString , ' número primos' "Print"
   ~~~
   
+#### *Exemplos Interessantes*
+
+  ~~~~
+ page := ZnClient new get: 'http://google.com'.
+ Transcript show: page.
+  ~~~~
+  Esse simples linha de código em Smalltalk permite o usuário ler o código HTML de uma página qualquer da Web.Abaixo segue o mesmo exemplo de código só que em Java.A diferença de complexidade do código é nítida.
+  ~~~~ 
+  import java.net.*;
+import java.util.Scanner;
+/*
+ * This program allows you to get HTML source from any website.
+*/
+public class HelloWorld2{
+ public static void main(String[] args) throws Exception{
+  URL u;
+  Scanner s;
+  u = new URL("http://www.google.com");
+  s = new Scanner(u.openStream());
+  while(s.hasNext()){
+   System.out.println(s.nextLine());
+  }
+ }
+}
+ ~~~~
+ Abaixo, segue um exemplo de código em Smalltalk utilizando Reflection, onde as variáveis "altura" e "peso" são modificadas em tempo de execução. Percebam que o nome da variável é passada como String (entre aspas), isso faz parte da utilização do método Reflection. Em Smalltalk, as variáveis de instância são variáveis privadas, portanto não é possível modifica-las sem a utilização do Reflection.
+ 
+ ~~~~  
+Transcript clear.
+pessoa1:= CalcIMC new.
+pessoa1 calculoimc .
+Transcript cr.
+caio instVarNamed: 'peso' put: ((UIManager default request: 'Digite o novo valor de peso') asNumber).
+caio instVarNamed: 'altura' put: ((UIManager default request: 'Digite o novo valor de altura') asNumber).
+Transcript show: 'Novo cálculo IMC :'.pessoa1 calculoimc .
+~~~~  
+
+Apesar de Java também possuir a funcionalidade reflection, no código abaixo estamos utilizando getters/setters para a alteração do valor da variável em tempo de execução.
+
+~~~~  
+public class Reflection {
+    
+   static class Pessoa {
+
+        private double peso;
+        private double altura;
+
+        public Pessoa(double peso, double altura){
+            this.peso=peso;
+            this.altura=altura;
+
+        }
+
+        public double getPeso(){
+            return this.peso;
+
+        }
+
+        public double getAltura(){
+            return this.altura;
+
+        }
+        
+        public void setAltura(double altura){
+            this.altura=altura;
+        }
+        
+        public void setPeso(double peso){
+            this.peso=peso;
+        }        
+
+        public double imc(){
+            return peso/(altura*altura);
+
+        }
+
+    } 
+
+    public static void main(String[] args) {
+        Pessoa pessoa1 = new Pessoa(90,1.9);
+        System.out.println("O IMC é: " + pessoa1.imc());
+        pessoa1.setPeso(80);
+        pessoa1.setAltura(1.8);
+        System.out.println("O novo IMC é: " + pessoa1.imc());
+        System.out.println("O novo IMC é: " + pessoa1.imc());
+    
+    }
+}
+~~~~    
+
+Outro exemplo interessante em Smalltalk é a utilização de sua funcionalidade baseada em imagem. Eu precisei formatar meu computador no meio de um projeto (programas para esse artigo). Porém lembrei de fazer o backup da pasta dos programas, nesta pasta continha a imagens das instâncias de cada projeto (cada janela aberta). A princípio não tinha entendido muito bem esse conceito. Mas após a formatação, e instalar o Pharo no PC, consegui acessar os arquivos de imagem dos meu códigos, e foi possível retoma-los de onde parei. Com todas as modificações feitas dentro da instância salvas.
+
+Por exemplo, o código abaixo permite alterar o código de erro daquela instância toda. Como estava trablhando em um projeto que só aceitava número inteiros positivos fiz essa alteração no código de erro:
+
+~~~~ 
+error: aString 
+	"Throw a generic Error exception."
+
+	^Error new signal:'Voce deve digitar um número inteiro maior que zero'
+~~~~ 
+Quando abri o arquivo de imagem no meu PC formatado, puder perceber que essa modificação do código de erro de toda a instância permanecia.
+
+Com essa funcionalidade é possível transferir os arquivos de imagem entre computadores, e até mesmo sistemas operacionais. Além de se você precisar para de programar, ou seu computador der algum problema, você sabe que nada do seu código foi perdido, e você poderá voltar a programar de onde parou.
+
 ## **Funções de Alta Expressividade:**
   ### Linguagem Baseada em Imagens
   Smalltalk é uma linguagem baseada em imagem (image based). Normalmente, as linguagens de programação separam o código estático (funções, definições de classes), do código dinamico, ou em tempo de execução (como objetos). Quando executado, o código é carregado e sempre startado do zero, arquivos de configurações ou fontes de dados são recriados. Qualquer configuração do programa (ou do programador) não é salva e precisa ser reconfigurada a cada reinício.Quando você sai de um programa tradicional e salva e depois inicia de novo, você perde muita informação, como histórico do que foi alterado ou até mesmo a posição do cursor. Ao entrar no Microsoft Word, por exemplo, você vai perceber que vai demorar um pouco, isso acontece pois ele precisa reprocessar muitos conceitos antes de começar a se tornar utilizável.
